@@ -86,7 +86,7 @@ const arrowConnectMobile = document.getElementById('arrowConnectMobile');
 
 function openConnectSubMenuMobile(){
     connectSubMenuMobile.classList.toggle('hidden');
-    arrowConnectDesktop.classList.toggle('rotate');
+    arrowConnectMobile.classList.toggle('rotate');
 }
 
 connectMobileBtn.addEventListener('click', openConnectSubMenuMobile);
