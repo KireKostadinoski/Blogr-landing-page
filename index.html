@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Blogr</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Initial state (arrow pointing down) */
+        #arrowProductDesktop,
+        #arrowCompanyDesktop,
+        #arrowConnectDesktop,
+        #arrowProductMobile,
+        #arrowCompanyMobile,
+        #arrowConnectMobile {
+            transition: transform 0.3s ease;
+        }
+
+        /* Rotate the arrow up (180 degrees) */
+        .rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section1">
+        <div
+            class="mb-[100px] w-full h-[600px] bg-[linear-gradient(90deg,_#FF8F71_0%,_#FF3E55_100%)] rounded-bl-[100px] relative">
+            <div class="w-full h-[600px] bg-homeBgMobile lg:bg-homeBgDesktop bg-center bg-cover bg-no-repeat">
+                <!-- mobile device navbar -->
+                <nav class="w-[95%] mx-auto flex flex-row justify-between items-center pt-[56px] md:hidden">
+                    <div class="w-[82px] h-[32px]">
+                        <img src="./images/logo.svg" alt="">
+                    </div>
+                    <div class="w-[32px] h-[18px] cursor-pointer">
+                        <img src="./images/icon-hamburger.svg" alt="" id="menuBtn">
+                    </div>
+                </nav>
+                <!-- Mobile menu -->
+                <div id="mobileMenu"
+                    class="hidden bg-white w-[95%] md:hidden space-y-5 rounded-xl absolute top-[125px] left-[2.5%] shadow-xl flex flex-col items-center p-10 z-10">
+                    <div class="flex flex-row items-center space-x-2">
+                        <h2 class="text-[#1F3E5A] font-serif text-[18px] font-semibold cursor-pointer"
+                            id="productMobile">Product</h2>
+                        <img src="./images/icon-arrow-dark.svg" alt="" id="arrowProductMobile">
+                    </div>
+                    <div class="hidden bg-[#d9dbdd] w-[276px] p-8 rounded-xl flex flex-col justify-center items-center space-y-2"
+                        id="productSubMenuMobile">
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Owerview</h2>
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Pircing</h2>
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Marketplace</h2>
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Features</h2>
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Integrations</h2>
+                    </div>
+                    <div class="flex flex-row items-center space-x-2">
+                        <h2 class="text-[#1F3E5A] font-serif text-[18px] font-semibold cursor-pointer"
+                            id="companyMobile">Company</h2>
+                        <img src="./images/icon-arrow-dark.svg" alt="" id="arrowCompanyMobile">
+                    </div>
+                    <div class="hidden bg-[#d9dbdd] w-[276px] p-8 rounded-xl flex flex-col justify-center items-center space-y-2"
+                        id="companySubMenuMobile">
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">About</h2>
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Team</h2>
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Blog</h2>
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Careers</h2>
+                    </div>
+                    <div class="flex flex-row items-center space-x-2">
+                        <h2 class="text-[#1F3E5A] font-serif text-[18px] font-semibold cursor-pointer"
+                            id="connectMobile">Connect</h2>
+                        <img src="./images/icon-arrow-dark.svg" alt="" id="arrowConnectMobile">
+                    </div>
+                    <div class="hidden bg-[#d9dbdd] w-[276px] p-8 rounded-xl flex flex-col justify-center items-center space-y-2"
+                        id="connectSubMenuMobile">
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Contact</h2>
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Newsletter</h2>
+                        <h2 class="text-gray-700 font-serif text-[16px] leading-28px cursor-pointer">Linkedin</h2>
+                    </div>
+                    <div
+                        class=" w-full h-[125px] flex flex-col items-center space-y-[24px] border-t-2 border-gray-200 pt-[24px]">
+                        <h2 class="text-[#1F3E5A] font-serif text-[18px] leading-28px cursor-pointer font-semibold">
+                            Login</h2>
+                        <div
+                            class="w-[137px] h-[48px] bg-[linear-gradient(90deg,_#FF8F71_0%,_#FF3E55_100%)] flex justify-center items-center font-sans text-[16px] font-bold text-white rounded-full cursor-pointer ">
+                            Sign Up
+                        </div>
+                    </div>
+                </div>
+                <!-- large device navbar -->
+                <nav class=" md:flex flex-row justify-between hidden">
+                    <div class="md:absolute md:top-[63px] md:left-[167px] flex flex-row space-x-[50px]">
+                        <div class="w-[101px] h-[40px]">
+                            <img src="./images/logo.svg" alt="">
+                        </div>
+                        <div class="flex flex-row items-center space-x-12 relative">
+                            <div class="flex flex-row items-center space-x-[8px] cursor-pointer" id="productDesktop">
+                                <h2 class="text-white font-sans font-bold text-[16px]">Product</h2>
+                                <img src="./images/icon-arrow-light.svg" alt="" id="arrowProductDesktop">
+                            </div>
+                            <div class="flex flex-row items-center space-x-[8px] cursor-pointer" id="companyDesktop">
+                                <h2 class="text-white font-sans font-bold text-[16px]">Company</h2>
+                                <img src="./images/icon-arrow-light.svg" alt="" id="arrowCompanyDesktop">
+                            </div>
+                            <div class="flex flex-row items-center space-x-[8px] cursor-pointer" id="connectDesktop">
+                                <h2 class="text-white font-sans font-bold text-[16px]">Connect</h2>
+                                <img src="./images/icon-arrow-light.svg" alt="" id="arrowConnectDesktop">
+                            </div>
+                            <div class="absolute top-[55px] -left-[55px] bg-white w-[168px] hidden rounded-lg shadow-xl flex flex-col justify-center px-5 py-2 space-y-1"
+                                id="productSubMenu">
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Owerview</h2>
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Pircing</h2>
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Marketplace</h2>
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Features</h2>
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Integrations</h2>
+                            </div>
+                            <div class="absolute top-[55px] left-[78px] bg-white w-[168px] hidden rounded-lg shadow-xl flex flex-col justify-center px-5 py-2 space-y-1"
+                                id="companySubMenu">
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">About</h2>
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Team</h2>
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Blog</h2>
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Careers</h2>
+                            </div>
+                            <div class="absolute top-[55px] left-[210px] bg-white w-[168px] hidden rounded-lg shadow-xl flex flex-col justify-center px-5 py-2 space-y-1"
+                                id="connectSubMenu">
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Contact</h2>
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Newsletter</h2>
+                                <h2 class="text-[#2D2E40] font-sans text-[15px] leading-33px cursor-pointer hover:font-bold duration-100">Linkedin</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md:absolute md:top-[63px] md:right-[167px]">
+                        <div class="flex flex-row items-center space-x-[72px]">
+                            <h2 class="text-white font-sans font-bold text-[16px] cursor-pointer">Login</h2>
+                            <div
+                                class="w-[137px] h-[48px] text-[#FF505C] flex justify-center items-center font-sans text-[16px] font-bold bg-white rounded-full cursor-pointer hover:text-white hover:bg-opacity-20 duration-100">
+                                Sign Up
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div
+                    class="w-[310px] mx-auto top-[196px] h-[248px] md:w-[920px] flex flex-col justify-center items-center space-y-[48px] mt-[120px] md:mt-[226px]">
+                    <div class="flex flex-col justify-center items-center">
+                        <h1
+                            class="font-serif font-semibold text-[36px] md:text-[64px] tracking-wide text-white text-center">
+                            A modern
+                            publishing platform</h1>
+                        <p class="font-serif font-light text-[18px] tracking-wide text-white text-center">Grow your
+                            audience and build your online brand</p>
+                    </div>
+                    <div class="w-[290px] mx-auto flex flex-row justify-between">
+                        <div
+                            class="w-[137px] h-[48px] text-[#FF505C] flex justify-center items-center font-sans text-[16px] font-bold bg-white rounded-full cursor-pointer hover:bg-opacity-20 hover:text-white duration-100 ">
+                            Start for Free
+                        </div>
+                        <div
+                            class="w-[137px] h-[48px] text-white flex justify-center items-center font-sans text-[16px] font-bold border border-white rounded-full cursor-pointer hover:bg-white hover:text-[#FF7B86]">
+                            Learn More
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="section2">
+        <div class="w-[327px] mx-auto h-[1086px] md:w-full md:h-[920px] space-y-[38px] z-0">
+            <div class="h-[43px] flex justify-center items-center">
+                <h1
+                    class="font-serif font-semibold text-[28px] md:text-[40px] tracking-wide text-center text-[#1F3E5A]">
+                    Designed for
+                    the future</h1>
+            </div>
+
+
+            <div class="flex flex-col md:flex-row-reverse md:space-x-[125px] space-x-0 relative">
+
+                <div
+                    class="md:absolute w-[326px] md:w-[880px] mx-auto h-[326px] md:h-[882px] bg-ilustratorBgMobile lg:bg-ilustratorBgDesktop bg-center  bg-cover bg-no-repeat">
+
+                </div>
+
+                <div class="flex flex-col justify-center space-y-[30px] md:absolute md:left-[15px] md:top-[230px]">
+                    <div class="w-full md:w-[440px] flex flex-col space-y-[16px]">
+                        <h1
+                            class="font-serif font-semibold text-[28px] leading-32px text-center md:text-left text-[#1F3E5A]">
+                            Introducing
+                            an
+                            extensible editor</h1>
+                        <p
+                            class="font-light text-[16px] leading-28px text-center md:text-left text-[#4C5862] tracking-normal">
+                            Blogr features an exceedingly intuitive interface which lets you focus on one thing:
+                            creating
+                            content. The editor supports management of multiple blogs and allows easy manipulation of
+                            embeds
+                            such as images, videos, and Markdown. Extensibility with plugins and themes provide easy
+                            ways to
+                            add
+                            functionality or change the looks of a blog.
+                        </p>
+                    </div>
+
+
+                    <div class="w-full md:w-[440px] flex flex-col space-y-[16px]">
+                        <h1
+                            class="font-serif font-semibold text-[28px] leading-32px text-center md:text-left text-[#1F3E5A]">
+                            Robust
+                            content
+                            management</h1>
+                        <p
+                            class="font-light text-[16px] leading-28px text-center md:text-left text-[#4C5862] tracking-normal">
+                            Flexible content management enables users to easily move through posts. Increase the
+                            usability
+                            of
+                            your blog by adding customized categories, sections, format, or flow. With this
+                            functionality,
+                            you’re in full control.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="section3">
+        <div
+            class="w-full h-[625px] md:w-full md:h-[400px] bg-[linear-gradient(90deg,_#2D2E40_0%,_#3F4164_100%)] rounded-bl-[100px] rounded-tr-[100px] mb-[100px] relative">
+            <div
+                class="w-full h-[625px] md:w-full md:h-[400px] bg-circlesBg bg-top bg-cover bg-no-repeat mt-[200px] flex justify-center items-center">
+                <div class="absolute -top-[160px] w-full mx-auto h-[604px] md:mx-0 md:-top-[60px]">
+                    <img src="./images/illustration-phones.svg" alt=""
+                        class="w-[328px] h-[347px] md:w-[472px] md:h-[499px] mx-auto md:mx-0 md:ms-[165px]">
+                </div>
+                <div
+                    class="md:absolute md:top-[20px] md:left-[754px] flex flex-col w-[327px] h-[295px] md:w-[540px] md:h-[178px] space-y-[16px] pt-28">
+                    <h1
+                        class="font-serif font-semibold text-[28px] md:text-[40px] leading-32px text-center md:text-left md:text-nowrap text-white">
+                        State of the
+                        Art Infrastructure</h1>
+                    <p class="font-light text-[16px] leading-28px text-center md:text-left text-white">
+                        With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
+                        connectivity. This ensures your site will load instantly, no matter where your readers are,
+                        keeping your site competitive.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="section4">
+        <div
+            class="w-[327px]  mx-auto h-[1086px] md:w-full md:h-[786px] flex flex-col md:flex-row space-y-[38px] md:relative">
+
+            <div
+                class="md:absolute md:-left-[200px] w-[326px] md:w-[880px] mx-auto h-[326px] md:h-[786px] bg-laptopBgMobile lg:bg-laptopBgDesktop bg-center bg-cover bg-no-repeat">
+
+            </div>
+
+            <div class="flex flex-col justify-center space-y-[40px] md:absolute md:left-[735px] md:top-[85px]">
+                <div class="w-full md:w-[440px] flex flex-col space-y-[16px]">
+                    <h1
+                        class="font-serif font-semibold text-[28px] leading-32px text-center md:text-left text-[#1F3E5A]">
+                        Free, open,
+                        simple</h1>
+                    <p
+                        class="font-light text-[16px] leading-28px text-center md:text-left text-[#4C5862] tracking-normal">
+                        Blogr is a free and open source application backed by a large community of helpful developers.
+                        It
+                        supports features such as code syntax highlighting, RSS feeds, social media integration,
+                        third-party
+                        commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is
+                        relatively easy to learn.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-[440px] flex flex-col space-y-[16px]">
+                    <h1
+                        class="font-serif font-semibold text-[28px] leading-32px text-center md:text-left text-[#1F3E5A]">
+                        Powerful
+                        tooling</h1>
+                    <p
+                        class="font-light text-[16px] leading-28px text-center md:text-left text-[#4C5862] tracking-normal">
+                        Batteries included. We built a simple and straightforward CLI tool that makes customization and
+                        deployment a breeze, but capable of producing even the most complicated sites.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full h-[907px] md:h-[359px] flex justify-center items-center bg-[#24242C] rounded-tr-[100px]">
+        <div
+            class="w-full h-[750px] md:h-[359px]  flex flex-col md:flex-row justify-center items-center md:items-start space-y-[72px] md:space-y-0 md:space-x-96  md:px-36 md:py-12">
+            <div class="w-[101px] h-[40px]">
+                <img src="./images/logo.svg" alt="">
+            </div>
+            <div
+                class="flex flex-col md:flex-row items-center md:items-start justify-between space-y-[40px] md:space-y-0 md:space-x-40">
+                <div class="flex flex-col justify-between items-center md:items-start space-y-[18px]">
+                    <div>
+                        <h1 class="font-serif font-medium text-[20px] text-white leading-33px cursor-pointer">Product
+                        </h1>
+                    </div>
+                    <div class="flex flex-col justify-center items-center md:items-start space-y-[5px]">
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">Owerview
+                        </h2>
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">Pircing
+                        </h2>
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">Marketplace
+                        </h2>
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">Features
+                        </h2>
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">
+                            Integrations</h2>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between items-center md:items-start space-y-[18px]">
+                    <div>
+                        <h1 class="font-serif font-medium text-[20px] text-white leading-33px cursor-pointer">Company
+                        </h1>
+                    </div>
+                    <div class="flex flex-col justify-center items-center md:items-start space-y-[5px]">
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">About</h2>
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">Team</h2>
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">Blog</h2>
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">Careers
+                        </h2>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between items-center md:items-start space-y-[20px]">
+                    <div>
+                        <h1 class="font-serif font-medium text-[18px] text-white leading-33px cursor-pointer">Connect
+                        </h1>
+                    </div>
+                    <div class="flex flex-col justify-center items-center md:items-start space-y-[5px]">
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">Contact
+                        </h2>
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">Newsletter
+                        </h2>
+                        <h2 class="font-serif text-[18px] text-white leading-33px opacity-75 cursor-pointer hover:underline duration-100">Linkedin
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
